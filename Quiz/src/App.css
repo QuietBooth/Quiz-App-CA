@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mina', sans-serif;
+}
+
+.Quiz {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Nav-Bar {
+  width: 100%;
+  height: 15%;
+}
+
+.Quiz-box {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  box-shadow: 2px 2px 2px 2px black;
+}
+
+.Quiz-box > h5,
+.Quiz-box > h3 {
+  font-size: 30px;
+}
+
+.Main-Part {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.optContainer {
+  width: 50%;
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.option,
+.option.selected {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.buttonContainer > button {
+  width: 100px;
+  height: 40px;
+}
+
+.Result-box {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.Result-box > button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid rgb(0, 0, 0);
+  background: rgb(216, 216, 216);
+  box-shadow: 5px 4px 2px 0px #a0a0a0;
+}
+
+/* Light Theme Styles with Gradients */
+body.Light {
+  background: #f1f1f1;
+  color: #000000;
+}
+
+.Quiz.light {
+  color: #000000;
+}
+
+.Light.Question {
+  color: black;
+}
+
+.light .Quiz-box {
+  background: linear-gradient(to right, #b3b3b3, #ffffff); /* Dark white gradient background */
+  color: #000000;
+  border: 4px solid #000000;
+  box-shadow: 15px 0px 15px 0px rgb(0, 0, 0);
+}
+
+.Light .Quiz-box > h5,
+.Light .Quiz-box > h3 {
+  color: black;
+}
+
+.light.option {
+  background: linear-gradient(to right, #b3b3b3, #ffffff); /* Dark white gradient background */
+  color: #000000;
+}
+
+.light.selected.option {
+  background-color: #000000;
+  color: #000000;
+}
+
+.light.buttonContainer {
+  background: linear-gradient(to right, #d9d9d9, #b3b3b3); /* Dark white gradient background for button container */
+}
+
+.light.buttonContainer button {
+  background-color: #1976D2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.light.Result-box {
+  background: linear-gradient(to right, #b3b3b3, #ffffff); /* Dark white gradient background */
+  color: #000000;
+  border: 4px solid #000000;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.light.Result-box > button {
+  background-color: #1976D2;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Dark Theme Styles */
+body.Dark {
+  background: linear-gradient(to bottom right, #0d0c17, #1f1e2e);
+  color: #ffffff;
+}
+
+.Quiz.dark {
+  color: #ffffff;
+}
+
+.Dark .Quiz-box {
+  background: linear-gradient(to bottom right, #161424, #0f0e18);
+  color: #ffffff;
+  border: 3px solid #7c6a8a;
+  box-shadow: 10px 0px 10px 0px #000000;
+}
+
+/* .option.dark {
+  background-color */
+
+/* Add the previous styles above this line */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .Quiz-box {
+    width: 90%;
+  }
+
+  .buttonContainer {
+    width: 70%;
+  }
+
+  .optContainer {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .option,
+  .option.selected {
+    width: 40%; /* Adjust the width as needed for your design */
+    margin: 5px;
+  }
+
+  .Result-box {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Quiz,
+  .Nav-Bar,
+  .Quiz-box,
+  .Main-Part,
+  .optContainer,
+  .option,
+  .buttonContainer,
+  .Result-box {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .Quiz-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .optContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .option,
+  .option.selected {
+    width: 90%;
+    margin: 5px;
+  }
+
+  .buttonContainer {
+    height: 40%;
+    margin-bottom: 5px;
+    width: 80%;
+  }
+
+  .buttonContainer > button {
+    width: 100px;
+  }
+
+  .Result-box {
+    padding-bottom: 20px;
+  }
+}
+
+/* Add the previous styles below this line */
+
